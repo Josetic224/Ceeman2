@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Image Implementation */
+.hero-bg {
+  background-repeat: no-repeat;
+}
+
+/* Custom class to hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Custom class for background opacity */
+.bg-opacity-container {
+  position: relative;
+}
+
+.bg-opacity-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.4;
+  background-image: radial-gradient(
+    ellipse farthest-corner at 10px 10px,
+    #444cf7,
+    #444cf7 50%,
+    #e5e5f7 50%
+  );
+  background-size: 10px 10px;
+  z-index: -1;
+  border-radius: inherit;
+}
